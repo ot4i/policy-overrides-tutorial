@@ -145,7 +145,11 @@
 									<ol>
 									
 									
-										<li> Assuming you are using a Windows platform, open an App Connect Enterprise Command Console, and issue the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u <yoursmtpuserid> -p <yoursmtppassword></yoursmtppassword></yoursmtpuserid></code><br>where <b>C:\MyServer</b> is a folder on your file system that the server will use for its working directory.
+										<li> Assuming you are using a Windows platform, open an App Connect Enterprise Command Console, and run the mqsicreateworkdir command to prepare a work directory for an integration server:<br><code>mqsicreateworkdir C:\MyServer</code>
+										
+										</li>
+									
+										<li> Run the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u <yoursmtpuserid> -p <yoursmtppassword></yoursmtppassword></yoursmtpuserid></code><br>where <b>C:\MyServer</b> is a folder on your file system that the server will use for its working directory.
 										
 										</li>
 									
@@ -238,11 +242,11 @@
 										
 										</li>
 									
-										<li> Copy the sample server.conf.yaml file which is provided as part of the ACE installation into the root of your integration server's work directory. If you have used the default install location on Windows, and followed this tutorial's naming conventions then this will involve copying <code>C:\Program Files\IBM\ACE\11.0.0.1\server\sample\configuration\server.config.yaml</code> to <code>C:\MyServer\server.config.yaml</code>.  In the copied file, locate and edit this line:<br><code>  #policyProject: 'DefaultPolicies'   # Name of the Policy project that will be used for unqualified Policy references</code><br>... to become ...<br><code>  policyProject: 'MyPolicyProject'   # Name of the Policy project that will be used for unqualified Policy references </code>
+										<li> Look inside your integration server's work directory on the file system at <code>C:\MyServer</code> and edit the <code>server.conf.yaml</code> file. Find this line:<br><code>  #policyProject: 'DefaultPolicies'   # Name of the Policy project that will be used for unqualified Policy references</code><br>... and change it to become ...<br><code>  policyProject: 'MyPolicyProject'   # Name of the Policy project that will be used for unqualified Policy references </code>
 										
 										</li>
 									
-										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the MySMTPPolicy project into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then the project will end up at C:\MyTestServer\overrides\MyPolicyProject. Restart your integration server.
+										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the <code>MySMTPPolicy</code> project (which is a directory on your file system) into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then this directory will end up at C:\MyTestServer\overrides\MyPolicyProject. Restart your integration server.
 										
 										</li>
 									
