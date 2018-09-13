@@ -6,10 +6,10 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/HTTPInputEmailOutput/icons/full/obj16/HTTPInputEmailOutput.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/HTTPInputEmailOutput/icons/full/obj30/HTTPInputEmailOutput.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="42,34" URLSpecifier="/EmailOutput">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="42,34" URLSpecifier="/HTTPInputEmailOutput">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmEmailOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="238,34" smtpServer="(MyPolicyProject}:MySMTPPolicy" toAddresses="anyobscurenameyouwant@mailinator.com" fromAddress="YouNeedToChangeThis" subject="ACE Tutorial has succeeded" messageText="This is a simple email from the tutorial!">
+      <nodes xmi:type="ComIbmEmailOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="238,34" smtpServer="{MyPolicyProject}:MySMTPPolicy" toAddresses="anyobscurenameyouwant@mailinator.com" fromAddress="YouNeedToChangeThis" subject="ACE Tutorial has succeeded" messageText="This is a simple email from the tutorial!">
         <translation xmi:type="utility:ConstantString" string="Email Output"/>
       </nodes>
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="135,30">
