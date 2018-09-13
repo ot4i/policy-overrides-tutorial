@@ -149,7 +149,7 @@
 										
 										</li>
 									
-										<li> Run the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u <yoursmtpuserid> -p <yoursmtppassword></yoursmtppassword></yoursmtpuserid></code><br>where <b>C:\MyServer</b> is a folder on your file system that the server will use for its working directory.
+										<li> Run the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u YourSMTPUserId -p YourSMTPPassword</code><br>where <b>C:\MyServer</b> is a folder on your file system that the server will use for its working directory.
 										
 										</li>
 									
@@ -246,11 +246,11 @@
 										
 										</li>
 									
-										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the <code>MySMTPPolicy</code> project (which is a directory on your file system) into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then this directory will end up at C:\MyTestServer\overrides\MyPolicyProject. Restart your integration server.
+										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the <code>MyPolicyProject</code> project (which is a directory on your file system) into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then this directory will end up at C:\MyTestServer\overrides\MyPolicyProject. Restart your integration server.
 										
 										</li>
 									
-										<li> Back in the App Connect Entperise Toolkit, rebuild BAR file to <strong>just</strong> contain the application <span class="uicontrol">HTTPInputEmailOutput</span> and NOT the policy project   <span class="uicontrol">MyPolicyProject</span>. Deploy the new BAR file.
+										<li> Back in the App Connect Enterprise Toolkit, create a new BAR file, for example named  <span class="uicontrol">HTTPInputEmailOutput2.bar</span>, and build it to <strong>just</strong> contain the application <span class="uicontrol">HTTPInputEmailOutput</span> and NOT the policy project   <span class="uicontrol">MyPolicyProject</span>. Deploy the new BAR file.
 										
 										</li>
 									
