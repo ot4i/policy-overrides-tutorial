@@ -145,15 +145,15 @@
 									<ol>
 									
 									
-										<li> Assuming you are using a Windows platform, open an App Connect Enterprise Command Console, and run the mqsicreateworkdir command to prepare a work directory for an integration server:<br><code>mqsicreateworkdir C:\MyServer</code>
+										<li> Open an App Connect Enterprise Command Console and run the mqsicreateworkdir command to prepare a work directory for an integration server:<br><ul><li>If you are using a Windows platform: <code>mqsicreateworkdir C:\MyServer</code></li><li>If you are using a UNIX platform: <code>mqsicreateworkdir /home/exampleuser/MyServer</code></li></ul>
 										
 										</li>
 									
-										<li> Run the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u YourSMTPUserId -p YourSMTPPassword</code><br>where <b>C:\MyServer</b> is a folder on your file system that the server will use for its working directory.
+										<li> Run the mqsisetdbparms command to define the identity which ACE will use when communicating with your SMTP server:<br><ul><li>If you are using a Windows platform: <code>mqsisetdbparms -w C:\MyServer -n smtp::GoodIdentity -u YourSMTPUserId -p YourSMTPPassword</code><br>where <b>C:\MyServer</b> is a folder on your file system, created in the command above, that the server will use for its working directory.</li><li>If you are using a UNIX platform: <code>mqsisetdbparms -w /home/exampleuser/MyServer -n smtp::GoodIdentity -u YourSMTPUserId -p YourSMTPPassword</code><br>where <b>/home/exampleuser/MyServer</b> is a folder on your file system, created in the command above, that the server will use for its working directory.</li></ul>
 										
 										</li>
 									
-										<li> Now, start the integration server using the following command:<br><code>IntegrationServer --work-dir C:\MyServer --name MyServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code> <br>where <b>C:\MyServer</b> is the same folder on your file system that you used in the last command.
+										<li> Now, start the integration server using the following command:<br><ul><li>If you are using a Windows platform: <code>IntegrationServer --work-dir C:\MyServer --name MyServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code></li><li>If you are using a UNIX platform: <code>IntegrationServer --work-dir /home/exampleuser/MyServer --name MyServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code></li></ul>
 										
 										</li>
 									
@@ -242,11 +242,11 @@
 										
 										</li>
 									
-										<li> Look inside your integration server's work directory on the file system at <code>C:\MyServer</code> and edit the <code>server.conf.yaml</code> file. Find this line:<br><code>  #policyProject: 'DefaultPolicies'   # Name of the Policy project that will be used for unqualified Policy references</code><br>... and change it to become ...<br><code>  policyProject: 'MyPolicyProject'   # Name of the Policy project that will be used for unqualified Policy references </code>
+										<li> Look inside your integration server's work directory on the file system (at <code>C:\MyServer</code> on Windows and at <code>/home/exampleuser/MyServer</code> on UNIX) and edit the <code>server.conf.yaml</code> file. Find this line:<br><code>  #policyProject: 'DefaultPolicies'   # Name of the Policy project that will be used for unqualified Policy references</code><br>... and change it to become ...<br><code>  policyProject: 'MyPolicyProject'   # Name of the Policy project that will be used for unqualified Policy references </code>
 										
 										</li>
 									
-										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the <code>MyPolicyProject</code> project (which is a directory on your file system) into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then this directory will end up at C:\MyTestServer\overrides\MyPolicyProject. Restart your integration server.
+										<li> From your App Connect Enterprise Toolkit's workspace directory on the file system, copy the <code>MyPolicyProject</code> project (which is a directory on your file system) into your Integration Server's overrides directory. If you have followed this tutorial's suggested naming conventions then this directory will end up at <code>C:\MyTestServer\overrides\MyPolicyProject</code> on Windows and at <code>/home/exampleuser/MyServer/overrides/MyPolicyProject</code> on UNIX. Restart your integration server.
 										
 										</li>
 									
