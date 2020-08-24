@@ -227,8 +227,8 @@
                                         "details": "Open the  <span class='uicontrol'>HTTPInputEmailOutput.bar</span> BAR file and click the <span class='uicontrol'>Build and Save</span> button on the BAR editor's prepare tab. Drag and drop deploy the updated BAR file."																	
 												},
                         				    {
-                                        "details": "Repeat the test of the message flow by sending HTTP data to it using a client such as cURL, and this time you will note that an exception is reported in the command console window where the IntegrationServer is running. This exception occurs because having deleted the Policy Project qualifier, the EmailOutput node's policy can no longer be located."
-                        				    }
+                                        "details": "Repeat the test of the message flow by sending HTTP data to it using a client such as cURL, and this time you will note that an exception is reported in the command console window where the IntegrationServer is running. This exception occurs because having deleted the Policy Project qualifier, the EmailOutput node's policy can no longer be located. In this circumstance, the <span class='uicontrol'>SMTP Server and Port</span> property has been interpreted as a literal hard-coded SMTP server hostname, which of course cannot be connected to."
+											}
                                 ]
                             }
                         },
