@@ -32,7 +32,7 @@
   	{
         "_common":
     		{
-            "name": "Getting started with ACEv11 - Policy Projects and Policies with Overrides",
+            "name": "Getting started with ACEv12 - Policy Projects and Policies with Overrides",
             "shortDescription": "Learn about configuring ACE behavior using Policies and the hierarchy of policy overrides",
             "durationText": "This tutorial takes approximately",
             "durationTime": "5 minutes",
@@ -65,7 +65,7 @@
             "outcomeList":
       			[
                 {
-                    "title": "Understand the use of policies in ACEv11"
+                    "title": "Understand the use of policies"					
                 },
                 {
                     "title": "Understand the hierarchy of policy overrides and the concept of a default policy project"
@@ -78,7 +78,7 @@
                 "sections":
         				[
                     {
-                        "section": "App Connect Enterprise v11 introduces the concept of a Policy Project which can be created in the Toolkit, and is used to hold one or more policies. Policies are used to control connection properties and operational properties which are required by the ACE runtime."
+                        "section": "App Connect Enterprise uses a Policy Project, which can be created in the Toolkit, to hold one or more policies. Policies are used to control connection properties and operational properties which are required by the ACE runtime."
 					},					
                     {
                         "section": "A policy can be used to provide values which override the properties of message flow nodes. This is helpful for properties which are likely to differ across different runtime environments such as Dev / Test / Production as it avoids having to change the message flow itself when promoting it between environments."
