@@ -32,8 +32,8 @@
   	{
         "_common":
     		{
-            "name": "Getting started with ACEv12 - Policy Projects and Policies with Overrides",
-            "shortDescription": "Learn about configuring ACE behavior using Policies and the hierarchy of policy overrides",
+            "name": "Getting started - Policy Projects and Policies with Overrides",
+            "shortDescription": "Learn about configuring behavior using Policies and the hierarchy of policy overrides",
             "durationText": "This tutorial takes approximately",
             "durationTime": "5 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
